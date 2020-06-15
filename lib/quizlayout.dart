@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trailt/answer.dart';
 import 'package:trailt/result.dart';
+import 'package:trailt/scorecollector/sc.dart';
 
 
 
@@ -17,11 +18,17 @@ class _TheGameState extends State<TheGame> {
   int quesindex=0;
   int totalscore=0;
 
-  void reset()
+  void reset(var savescore,var title)
   {
+
+
+
     setState(() {
+
+
       quesindex=0;
       totalscore=0;
+
 
 
     });
@@ -69,7 +76,7 @@ class _TheGameState extends State<TheGame> {
       ),
     )
         :
-    Result(totalscore,reset);
+    Result(totalscore,reset,myl);
   }
 }
 

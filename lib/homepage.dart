@@ -1,12 +1,13 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TheHomePage extends StatelessWidget {
   final nameinp=TextEditingController();
   void routechanger(BuildContext context)
   {
+
+
     Navigator.of(context).pushNamed('/quizpage',arguments: {'username':nameinp.text});
 
   }

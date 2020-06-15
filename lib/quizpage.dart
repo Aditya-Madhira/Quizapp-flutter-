@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:trailt/tabsscreen.dart';
 
 class Quiz extends StatelessWidget {
 
@@ -20,10 +20,8 @@ class Quiz extends StatelessWidget {
 
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Quiz Page"),
-        centerTitle: true,
-      ),
+
+
       body: Container(
         height: theheight_2,
         child: Stack(
@@ -41,9 +39,9 @@ class Quiz extends StatelessWidget {
               SizedBox(height: 25,),
               Container(child: Text("Please choose one",style: TextStyle(fontSize: 30,color: Colors.deepOrange),),),
               Opacity(opacity: 0.63,child: Row(mainAxisAlignment: MainAxisAlignment.end,children: [ButtonTheme(minWidth: 20.0,child: RaisedButton(child: Text("Note",style: TextStyle(color: Colors.white),),onPressed: ()=>shownote(context),)),])),
-              SizedBox(height: 103,),
+              SizedBox(height: 109,),
               Container(
-                height: theheight_2 * 0.57,
+                height: theheight_2 * 0.49,
 
                 width: thewidth_2,
 

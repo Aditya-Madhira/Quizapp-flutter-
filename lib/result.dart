@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trailt/history.dart';
 
 
 class Result extends StatelessWidget {
   int myscore;
   final Function reseter;
-  Result(this.myscore,this.reseter){}
+  final List myl;
+  Result(this.myscore,this.reseter,this.myl){}
 
 
   String get rphrase
@@ -49,6 +51,7 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var thetitle=myl[0];
     return Scaffold(
       appBar: AppBar(title: Text('Score'),),
       body: Column(
@@ -68,7 +71,7 @@ class Result extends StatelessWidget {
             ),
           ),
           SizedBox(height: 270,),
-          RaisedButton(child: Text('reset'),onPressed: reseter,),
+          RaisedButton(child: Text('reset'),onPressed:() => reseter,),
         ],
       ),
     );
